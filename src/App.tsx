@@ -16,7 +16,10 @@ const App: React.FC = () => {
     }
 
     useEffect(() => {
-        if (!start || !seconds) return;
+        if (!start || !seconds) {
+            setStart(false)
+            return
+        }
 
         const interval = setInterval(() => {
             //@ts-ignore
