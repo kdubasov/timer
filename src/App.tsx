@@ -19,6 +19,7 @@ const App: React.FC = () => {
         if (!start || !seconds) return;
 
         const interval = setInterval(() => {
+            //@ts-ignore
             setSeconds(prev => prev - 1)
         },1000)
         return () => clearInterval(interval)
